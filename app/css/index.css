@@ -1,0 +1,54 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
+.button-search {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(28, 184, 65);
+  margin: 20px;
+}
+
+
+
+.title {
+  color: white;
+}
+
+.pure-form {
+  text-align: center;
+}
+
+.header {
+  height: 70px;
+  background: rgba(252, 90, 44, .89);
+  display: flex;
+  justify-content: space-between;
+}
+
+.container--search {
+  background: url('/app/images/pattern.svg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.promt {
+  font-weight: normal;
+  color: white;
+}
+
+.container--search h1 {
+  font-weight: normal;
+}
+
+.container,
+.container--search {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
