@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import Api from '../utils/api'
 
 
 class Search extends Component {
@@ -17,9 +18,15 @@ class Search extends Component {
     this.setState(() => ({city}))
   }
 
-  handleSubmit(){
-
+  handleSubmit(e){
+    e.preventDefault()
+    const city = this.state.city
+    if(!city){
+      return ;
+    }
+    Api.getWeatherForCity(city)
   }
+  
 
   render() {
     const formClass = `pure-form ${this.props.direction === 'col' && 'pure-form-stacked'}`
