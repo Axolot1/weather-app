@@ -10,13 +10,36 @@ body {
   margin: 20px;
 }
 
+.container-weather {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.weather-icon {
+  height: 130px;
+}
+
+.subTitle {
+  font-size: 30px;
+  font-weight: 100;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.forcast-list{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .title {
   color: white;
+  margin-left: 20px;
 }
 
-.pure-form {
+.text-center {
   text-align: center;
 }
 
@@ -51,4 +74,13 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.container--forcast {
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.container--forcast .container-weather {
+  cursor: pointer;
 }

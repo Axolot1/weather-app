@@ -21,6 +21,10 @@ function formatDate(sec) {
   return date.toLocaleDateString('en-US', options);
 }
 
+function formatIconUrl(icon){
+  return `/app/images/weather-icons/${icon}.svg`
+}
+
 function formatDataForWeather(data) {
   return {
     date: formatDate(data.dt),
@@ -28,7 +32,7 @@ function formatDataForWeather(data) {
     maxTemp: kelToCelDegree(data.temp.max),
     humidity: data.humidity,
     description: data.weather[0].description,
-    icon: data.weather[0].icon
+    icon: formatIconUrl(data.weather[0].icon)
   }
 }
 
