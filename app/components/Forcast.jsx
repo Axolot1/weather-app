@@ -25,6 +25,13 @@ class Forcast extends Component {
       });
   }
 
+  handleWeatherClick(weather){
+    this.props.history.push({
+      pathname: `/detail/${this.state.city}`,
+      state: weather
+    })
+  }
+
   render() {
     const {city, weathers} = this.state
     return (
@@ -35,6 +42,7 @@ class Forcast extends Component {
               <div className="forcast-list">
                 {weathers.map(w => {
                   return <Weather key={w.date} 
+                          onClick={() => this.handleWeatherClick(w)}
                           imgUrl={w.icon} 
                           date={w.date}/>
                 })}
